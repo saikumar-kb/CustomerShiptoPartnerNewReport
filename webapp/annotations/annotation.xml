@@ -1,0 +1,330 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZSD_CUST_SHIPTO_PARTNER/$metadata">
+        <edmx:Include Namespace="cds_zcsd_cust_shipto_partner"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="cds_zcsd_cust_shipto_partner.ZCSD_CUST_SHIPTO_PARTNERType">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Customer</PropertyPath>
+                        <PropertyPath>SalesOrganization</PropertyPath>
+                        <PropertyPath>PartnerFunction</PropertyPath>
+                        <PropertyPath>Country</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Customer"/>
+                            <PropertyValue Property="Label" String="{@i18n>customer}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName"/>
+                            <PropertyValue Property="Label" String="{@i18n>customerName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrganization"/>
+                            <PropertyValue Property="Label" String="{@i18n>salesOrganization}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Division"/>
+                            <PropertyValue Property="Label" String="{@i18n>division}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PartnerFunction"/>
+                            <PropertyValue Property="Label" String="{@i18n>partnerFunction}"/>
+                        </Record>
+                        <!-- <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BPCustomerNumber"/>
+                            <PropertyValue Property="Label" String="{@i18n>bpCustomerNumber}"/>
+                        </Record> -->
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ShipToCustomer"/>
+                            <PropertyValue Property="Label" String="{@i18n>shipToCustomer}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BusinessPartnerName"/>
+                            <PropertyValue Property="Label" String="{@i18n>businessPartnerName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CareOfName"/>
+                            <PropertyValue Property="Label" String="{@i18n>careOfName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StreetPrefixName1"/>
+                            <PropertyValue Property="Label" String="{@i18n>streetPrefixName1}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StreetPrefixName2"/>
+                            <PropertyValue Property="Label" String="{@i18n>streetPrefixName2}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StreetName"/>
+                            <PropertyValue Property="Label" String="{@i18n>streetName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="HouseNumber"/>
+                            <PropertyValue Property="Label" String="{@i18n>houseNumber}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="HouseNumberSupplementText"/>
+                            <PropertyValue Property="Label" String="{@i18n>houseNumberSupplementText}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StreetSuffixName1"/>
+                            <PropertyValue Property="Label" String="{@i18n>streetSuffixName1}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StreetSuffixName2"/>
+                            <PropertyValue Property="Label" String="{@i18n>streetSuffixName2}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DistrictName"/>
+                            <PropertyValue Property="Label" String="{@i18n>districtName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="VillageName"/>
+                            <PropertyValue Property="Label" String="{@i18n>villageName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PostalCode"/>
+                            <PropertyValue Property="Label" String="{@i18n>postalCode}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CityName"/>
+                            <PropertyValue Property="Label" String="{@i18n>cityName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Country"/>
+                            <PropertyValue Property="Label" String="{@i18n>country}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Region"/>
+                            <PropertyValue Property="Label" String="{@i18n>region}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TaxJurisdiction"/>
+                            <PropertyValue Property="Label" String="{@i18n>taxJurisdiction}"/>
+                        </Record>
+                        
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zcsd_cust_shipto_partner.ZCSD_CUST_SHIPTO_PARTNERType/SalesOrganization">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="ValueListProperty" String="SalesOrganization"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="SalesOrganization"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Customer"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CustomerName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="CollectionPath" String="ZCSD_CUST_SHIPTO_PARTNER"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Label" String="Sales Organization"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zcsd_cust_shipto_partner.ZCSD_CUST_SHIPTO_PARTNERType/Customer">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="ValueListProperty" String="Customer"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Customer"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CustomerName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="CollectionPath" String="ZCSD_CUST_SHIPTO_PARTNER"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Label" String="{@i18n>customer}"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zcsd_cust_shipto_partner.ZCSD_CUST_SHIPTO_PARTNERType/PartnerFunction">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="ValueListProperty" String="PartnerFunction"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PartnerFunction"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="FullName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="CollectionPath" String="ZSD_PF_VALHELP"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Label" String="{@i18n>partnerFunction}"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zcsd_cust_shipto_partner.ZCSD_CUST_SHIPTO_PARTNERType/Country">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="ValueListProperty" String="Country"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Country"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Customer"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="CollectionPath" String="ZCSD_CUST_SHIPTO_PARTNER"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Label" String="{@i18n>country}"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zcsd_cust_shipto_partner.ZCSD_CUST_SHIPTO_PARTNERType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="Object Page"/>
+                        <PropertyValue Property="TypeNamePlural" String="Reports"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Customer"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#idGenInfo"/>
+                            <PropertyValue Property="Label" String="General Information"/>
+                            <PropertyValue Property="ID" String="idGenInfo"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="idGenInfo">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Customer"/>
+                            <PropertyValue Property="Label" String="{@i18n>customer}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName"/>
+                            <PropertyValue Property="Label" String="{@i18n>customerName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrganization"/>
+                            <PropertyValue Property="Label" String="{@i18n>salesOrganization}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Division"/>
+                            <PropertyValue Property="Label" String="{@i18n>division}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PartnerFunction"/>
+                            <PropertyValue Property="Label" String="{@i18n>partnerFunction}"/>
+                        </Record>
+                        <!-- <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BPCustomerNumber"/>
+                            <PropertyValue Property="Label" String="{@i18n>bpCustomerNumber}"/>
+                        </Record> -->
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ShipToCustomer"/>
+                            <PropertyValue Property="Label" String="{@i18n>shipToCustomer}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BusinessPartnerName"/>
+                            <PropertyValue Property="Label" String="{@i18n>businessPartnerName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CareOfName"/>
+                            <PropertyValue Property="Label" String="{@i18n>careOfName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StreetPrefixName1"/>
+                            <PropertyValue Property="Label" String="{@i18n>streetPrefixName1}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StreetPrefixName2"/>
+                            <PropertyValue Property="Label" String="{@i18n>streetPrefixName2}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StreetName"/>
+                            <PropertyValue Property="Label" String="{@i18n>streetName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="HouseNumber"/>
+                            <PropertyValue Property="Label" String="{@i18n>houseNumber}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="HouseNumberSupplementText"/>
+                            <PropertyValue Property="Label" String="{@i18n>houseNumberSupplementText}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StreetSuffixName1"/>
+                            <PropertyValue Property="Label" String="{@i18n>streetSuffixName1}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StreetSuffixName2"/>
+                            <PropertyValue Property="Label" String="{@i18n>streetSuffixName2}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DistrictName"/>
+                            <PropertyValue Property="Label" String="{@i18n>districtName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="VillageName"/>
+                            <PropertyValue Property="Label" String="{@i18n>villageName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PostalCode"/>
+                            <PropertyValue Property="Label" String="{@i18n>postalCode}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CityName"/>
+                            <PropertyValue Property="Label" String="{@i18n>cityName}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Country"/>
+                            <PropertyValue Property="Label" String="{@i18n>country}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Region"/>
+                            <PropertyValue Property="Label" String="{@i18n>region}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TaxJurisdiction"/>
+                            <PropertyValue Property="Label" String="{@i18n>taxJurisdiction}"/>
+                        </Record>
+                    </Collection>
+                        </PropertyValue>  
+                    </Record>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
